@@ -1,0 +1,21 @@
+pipeline { 
+    agent any 
+    stages {
+        stage('Build') { 
+            steps {
+                echo "Stage Build"
+                git 'https://github.com/veera315/stellarfeb2.git'
+            }
+        }
+        stage('Test') { 
+            steps {
+                echo "Stage Test"
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                echo "Stage Deploy"
+            }
+        }
+    }
+}
